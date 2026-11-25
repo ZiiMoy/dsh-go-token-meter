@@ -1,0 +1,15 @@
+{
+  "name": "local-token-meter",
+  "version": "1.0.0",
+  "title": {
+    "zh": "用量",
+    "en": "Usage"
+  },
+  "summary": {
+    "zh": "输入框上方显示本对话预估花费、DeepSeek 余额（含子智能体）和当前峰谷价（颜色区分 + 距下次切换倒计时），余额不足 5 元变红提醒；点开是完整用量面板，只读本机会话日志。",
+    "en": "Per-chat estimated spend, DeepSeek balance (subagents included) and the peak/off-peak price tag with a switch countdown on the composer strip, turning into a recharge warning below ¥5, with a full native usage panel. Reads local session logs only."
+  },
+  "category": "productivity",
+  "screenshots": [],
+  "homepage": "https://github.com/ZiiMoy/dsh-go-token-meter"
+}

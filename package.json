@@ -1,0 +1,84 @@
+{
+  "name": "local-token-meter",
+  "version": "1.0.0",
+  "description": "DSH Go 用量：输入框上方显示本对话预估花费与 DeepSeek 余额（含子智能体），余额不足 5 元变红提醒，点开是完整用量面板。只读本机会话日志。",
+  "type": "module",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "author": "ziimo",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZiiMoy/dsh-go-token-meter.git"
+  },
+  "homepage": "https://github.com/ZiiMoy/dsh-go-token-meter#readme",
+  "bugs": {
+    "url": "https://github.com/ZiiMoy/dsh-go-token-meter/issues"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "dsh-bundle",
+    "dsh-go",
+    "deepseek-harness",
+    "token",
+    "usage",
+    "balance",
+    "cost"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "dsh": ">=0.2.1-rc.2 <0.3.0-0",
+    "node": ">=22.15.0"
+  },
+  "dshGo": {
+    "v": 1,
+    "title": {
+      "zh": "用量",
+      "en": "Usage"
+    },
+    "icon": "chart",
+    "minApp": "1.3.0",
+    "contributes": {
+      "composer.strip": [
+        {
+          "id": "meter",
+          "icon": "chart",
+          "panel": "usage"
+        }
+      ],
+      "panels": [
+        {
+          "id": "usage",
+          "title": {
+            "zh": "用量",
+            "en": "Usage"
+          },
+          "icon": "chart",
+          "placement": [
+            "session.tab",
+            "features"
+          ],
+          "presentation": "page"
+        }
+      ],
+      "turn.note": [
+        {
+          "id": "note"
+        }
+      ]
+    }
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "package.json"
+  ]
+}
